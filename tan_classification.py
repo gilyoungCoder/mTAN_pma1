@@ -139,7 +139,7 @@ if __name__ == '__main__':
                 = train_batch[:, :, :dim], train_batch[:, :, dim:2*dim], train_batch[:, :, -1]
             
             augmented_data, augmented_mask, augmented_tp \
-                = train_batch[:, :, :dim], train_batch[:, :, dim:2*dim], train_batch[:, :, -1]
+                = train_aug[:, :, :dim], train_aug[:, :, dim:2*dim], train_aug[:, :, -1]
             
             # out = rec(torch.cat((augmented_data, augmented_mask), 2), augmented_tp)
             # qz0_mean, qz0_logvar = out[:, :, :args.latent_dim], out[:, :, args.latent_dim:]
